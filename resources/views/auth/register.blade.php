@@ -7,7 +7,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h3>Register</h3>
+                <h3>ลงทะเบียนผู้ใช้</h3>
             </div>
             <div class="card-body">
                 @if ($errors->any())
@@ -40,8 +40,9 @@
                     </div>
                     <button type="submit" class="btn btn-success w-100">ยืนยัน</button>
                 </form>
-                <p class="mt-3 text-center">
-                    มีบัญชีผู้ใช้แล้ว? <a href="{{ route('login') }}">เข้าสู่ระบบ</a>
+                <p class="mb-2 mt-2 me-5 text-center ">
+                    มีบัญชีผู้ใช้แล้ว? <a href="{{ route('login') }}" class="text-danger">เข้าสู่ระบบ</a>
+                    <a href="{{ route('welcome') }}" class="btn btn-secondary">กลับไปยังหน้าหลัก</a>
                 </p>
             </div>
         </div>
