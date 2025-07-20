@@ -27,6 +27,18 @@
                         <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required>
                     </div>
                     <div class="mb-3">
+                        <label for="surname" class="form-label">นามสกุล</label>
+                        <input type="text" class="form-control" id="surname" name="surname" value="{{ old('surname') }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="student_id" class="form-label">รหัสนักศึกษา</label>
+                        <input type="text" class="form-control" id="student_id" name="student_id" value="{{ old('student_id') }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="section" class="form-label">หมู่เรียน</label>
+                        <input type="text" class="form-control" id="section" name="section" value="{{ old('section') }}" required>
+                    </div>
+                    <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required>
                     </div>

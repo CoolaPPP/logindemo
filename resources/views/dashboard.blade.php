@@ -11,8 +11,12 @@
             </div>
             <div class="card-body">
                 @if(auth()->check())
-                    <h4 class="mb-3">ยินดีต้อนรับ คุณ {{ $user->name }} !</h4>
-                    <p>Email ของคุณ : {{ $user->email }}</p>
+                    <h4 class="mb-3">ยินดีต้อนรับ คุณ {{ $user->name }} {{ $user->surname }}!</h4>
+                    <p><strong>Email ของคุณ :</strong> {{ $user->email }}</p>
+
+                    <p><strong>รหัสนักศึกษา :</strong> {{ $user->student_id }}</p>
+
+                    <p><strong>หมู่เรียน :</strong> {{ $user->section }}</p>
 
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf

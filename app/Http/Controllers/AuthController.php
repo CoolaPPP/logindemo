@@ -20,13 +20,18 @@ class AuthController extends Controller
     {
     $request->validate([
         'name' => 'required|string|max:255',
+        'surname' => 'required|string|max:255',
+        'section' => 'required|string|max:255',
+        'student_id' => 'required|string|max:255',
         'email' => 'required|string|email|max:255|unique:users',
         'password' => 'required|string|min:6|confirmed',
     ]);
     $user = User::create([
         'name' => $request->name,
+        'surname' => $request->surname, 
+        'section' => $request->section, 
+        'student_id' => $request->student_id,
         'email' => $request->email,
-        //'password' => Hash::make($request->password),
         'password' => md5($request->password),
     ]);
     Auth::login($user);
